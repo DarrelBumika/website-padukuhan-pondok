@@ -14,11 +14,27 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => 'Admin Padukuhan',
-            'email' => 'admin@padukuhan-pondok.com',
-            'password' => Hash::make('admin123'),
-            'is_admin' => true,
-        ]);
+        // Super Admin
+        User::updateOrCreate(
+            ['email' => 'superadmin@padukuhan-pondok.com'],
+            [
+                'name' => 'Super Admin',
+                'password' => Hash::make('admin123'),
+                'is_admin' => true,
+                'role' => 'super_admin',
+            ]
+        );
+
+        // Admin Organisasi
+        User::updateOrCreate(
+            ['email' => 'admin@padukuhan-pondok.com'],
+            [
+                'name' => 'Admin Organisasi',
+                'password' => Hash::make('admin123'),
+                'is_admin' => true,
+                'role' => 'admin_organisasi',
+                'organisasi_id' => 1,
+            ]
+        );
     }
 }

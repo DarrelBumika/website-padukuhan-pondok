@@ -22,6 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'is_admin',
+        'role',
+        'organisasi_id',
     ];
 
     /**
@@ -46,5 +48,40 @@ class User extends Authenticatable
             'password' => 'hashed',
             'is_admin' => 'boolean',
         ];
+    }
+
+    public function organisasi()
+    {
+        return $this->belongsTo(Organisasi::class, 'organisasi_id');
+    }
+
+    public function berita()
+    {
+        return $this->hasMany(Berita::class, 'user_id');
+    }
+
+    public function prestasi()
+    {
+        return $this->hasMany(Prestasi::class, 'user_id');
+    }
+
+    public function fasilitas()
+    {
+        return $this->hasMany(Fasilitas::class, 'user_id');
+    }
+
+    public function isSuperAdmin()
+    {
+        return $this->role === 'super_admin';
+    }
+
+    public function isAdminOrganisasi()
+    {
+        return $this->role === 'admin_organisasi';
+    }
+
+    public function isUser()
+    {
+        return $this->role === 'user';
     }
 }

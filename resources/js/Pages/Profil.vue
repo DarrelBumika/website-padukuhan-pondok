@@ -51,9 +51,9 @@ const getActiveContent = () => {
 </script>
 
 <template>
-    <Head title="Beranda" />
+    <Head title="Profil" />
 
-    <MainLayout>
+    <MainLayout class="relative">
         <div class="w-full flex flex-col">
             <img src="/images/profile_banner.png" class="w-full shadow-2xl" alt="Profile Banner" />
             
@@ -76,7 +76,7 @@ const getActiveContent = () => {
                         </a>
                     </div>
                 </div>
-                <div class="max-w-4xl flex flex-col gap-6 rounded-lg ml-4 flex-1 mt-12">
+                <div class="max-w-4xl flex flex-col gap-6 rounded-lg ml-4 flex-1 m-12">
                     <div id="section-1" class="flex flex-col gap-4">
                         <h1 class="large-2 text-black">Luas dan Batas Wilayah</h1>
                         <p class="regular-5 text-black text-justify">
@@ -175,20 +175,20 @@ const getActiveContent = () => {
                                 Kelompok Kesenian Karawitan Sekar Putri lahir pada tahun 2018 dengan tempat latihan rutin di Sanggar Darmo Budaya Pondok. Kegiatan latihan biasanya diadakan setiap hari Rabu sore, dengan anggota utama para ibu-ibu pecinta seni karawitan. Karawitan Sekar Putri tidak hanya berfokus pada kegiatan musikal, tetapi juga memiliki peran edukatif, yakni mengenalkan seni karawitan kepada anak-anak agar tumbuh rasa cinta terhadap budaya lokal sejak dini. Kelompok ini juga aktif mengikuti berbagai pementasan dan festival kesenian di tingkat Kabupaten Sleman. Melalui aktivitas tersebut, Karawitan Sekar Putri berhasil memperkenalkan keindahan gamelan dan kekuatan musikalitas tradisi Jawa ke khalayak yang lebih luas, sekaligus meneguhkan Padukuhan Pondok sebagai pusat pengembangan seni budaya.
                             </p>
                             <div class="flex gap-4">
-                                <img src="/images/jathilan_roso_tunggal_1.png" class="flex-1 rounded-lg" alt="Profile Banner" />
-                                <img src="/images/jathilan_roso_tunggal_2.png" class="flex-1 rounded-lg" alt="Profile Banner" />
-                                <img src="/images/jathilan_roso_tunggal_3.png" class="flex-1 rounded-lg" alt="Profile Banner" />
-                                <img src="/images/jathilan_roso_tunggal_4.png" class="flex-1 rounded-lg" alt="Profile Banner" />
+                                <img src="/images/karawitan_1.png" class="flex-1 rounded-lg" alt="Profile Banner" />
+                                <img src="/images/karawitan_2.png" class="flex-1 rounded-lg" alt="Profile Banner" />
+                                <img src="/images/karawitan_3.png" class="flex-1 rounded-lg" alt="Profile Banner" />
+                                <img src="/images/karawitan_4.png" class="flex-1 rounded-lg" alt="Profile Banner" />
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex flex-col gap-4">
+                    <!-- <div class="flex flex-col gap-4">
                         <h1 class="large-2 text-black">Video Profil Kampung Budaya Padukuhan Pondok</h1>
                         <div class="w-full flex justify-center items-center">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/w_eNLYWjGNY?si=mTphnxw6J7U76w5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

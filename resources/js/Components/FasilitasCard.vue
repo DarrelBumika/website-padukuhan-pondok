@@ -1,10 +1,6 @@
 <template>
   <div 
-    :class="[
-      'bg-white rounded-lg transition-shadow duration-300',
-      sizeClasses,
-      customClass
-    ]"
+    class="bg-white rounded-lg transition-shadow duration-300"
     @click="handleClick"
   >
     <!-- Header dengan gambar (opsional) -->

@@ -8,18 +8,20 @@ const showingNavigationDropdown = ref(false);
 
 <template>
     <div>
-        <div class="min-h-screen">
-            <nav class="sm:flex sm:flex-col sm:justify-center sm:items-center min-h-20 bg-primary-6 sticky top-0">
+        <div class="lg:hidden min-h-screen flex flex-col justify-center items-center bg-primary-1">
+            <h3 class="font-bold text-white text-center">
+                Maaf, Tampilan mobile sedang <br />
+                dalam tahap pengembangan
+            </h3>
+            <img src="/images/logo_kkn_pondok.png" alt="logo kkn pondok">
+        </div>
+        <div class="hidden lg:block min-h-screen">
+
+            <!-- Navbar -->
+            <nav class="sm:flex sm:flex-col sm:justify-center sm:items-center min-h-20 bg-primary-6 !sticky top-0 z-100">
                 <div class="max-w-7xl flex mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
                         <div class="flex">
-                            <!-- Logo -->
-                            <!-- <div class="shrink-0 flex items-center">
-                                <Link :href="route('beranda')">
-                                    <ApplicationLogo class="block h-9 w-auto fill-current text-gray-800" />
-                                </Link>
-                            </div> -->
-
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <Link :href="route('beranda')"
@@ -105,12 +107,12 @@ const showingNavigationDropdown = ref(false);
             </nav>
 
             <!-- Page Content -->
-            <main class="w-full">
+            <main class="w-full flex justify-center">
                 <slot />
             </main>
 
-            <footer class="w-full justify-center items-center mt-32 py-16 text-white bg-darker-3 relative">
-                <img class="absolute top-0 right-0 -translate-y-1/2" src="/images/ornament-2.png" alt="ornament 2"/>
+            <footer class="w-full justify-center items-center py-16 text-white bg-darker-3 relative">
+                <img class="absolute top-0 right-0 -translate-y-1/2" src="/images/ornament/weaves_ornament.png" alt="ornament 2"/>
                 <div class="flex flex-col justify-center items-center gap-4 px-40">
                     <h1 class="large-1">Tumbuh Bersama Pondok</h1>
                     <p class="regular-5">Upaya gerak nyata dan kontribusi dalam perkembangan serta kemajuan bangsa.</p>

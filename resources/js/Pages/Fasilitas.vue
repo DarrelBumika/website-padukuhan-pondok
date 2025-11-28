@@ -1,122 +1,96 @@
 <script setup>
-import { Head } from '@inertiajs/vue3';
-import { ref } from "vue";
+import { Head, Link } from '@inertiajs/vue3';
 import MainLayout from '@/Layouts/MainLayout.vue';
 import Card from '@/Components/FasilitasCard.vue';
+import FasilitasCard from '@/Components/FasilitasCard.vue';
 
-const products = ref([
-  {
-    id: 1,
-    name: 'SPAH',
-    description: 'Saluran Pengolahan Air Hujan (SPAH) berupa saluran jalan dengan sumur resapan tiap tiga titik untuk mengurangi debit air hujan.',
-    // image: 'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=400',
-  },
-  {
-    id: 2,
-    name: 'IPAL Komunal',
-    description: 'Instalasi Pengolahan Air Limbah cair terpusat agar aman dibuang ke lingkungan sesuai baku mutu, dengan saluran pipa menuju bak IPAL.',
-    image: 'images/ipal.png',
-  },
-  {
-    id: 3,
-    name: 'Irigasi',
-    description: 'Sistem penyediaan dan pengaturan air untuk pertanian agar tanaman tetap tumbuh normal meskipun tanah kekurangan air.',
-    image: 'images/irigasi.png',
-  },
-  {
-    id: 4,
-    name: 'TPS3R',
-    description: 'Pengelolaan sampah 3R (Reduce, Reuse, Recycle) dengan teknologi mesin pencacah dan pengayak kompos untuk solusi sampah yang lebih efisien.',
-    image: 'images/tps3r.png',
-  },
-  {
-    id: 5,
-    name: 'Masjid',
-    description: 'Tempat ibadah umat Muslim di RT 04 dan RT 05.',
-    image: 'images/masjid.png',
-  },
-  {
-    id: 6,
-    name: 'Titik Kumpul Evakuasi',
-    description: 'Lokasi aman untuk berkumpul saat darurat seperti gempa, sekaligus tempat berlindung sementara.',
-    image: 'images/titik_kumpul_evakuasi.png',
-  },
-  {
-    id: 7,
-    name: 'GOR Pondok Sport',
-    description: 'Fasilitas olahraga dan pertemuan warga Padukuhan Pondok.',
-    image: 'images/gor_pondok_sport.png',
-  },
-  {
-    id: 8,
-    name: 'Jembatan',
-    description: 'Terdapat jembatan besar penghubung Pondok–Manukan dan jembatan kecil di RT 05.',
-    image: 'images/jembatan.png',
-  },
-  {
-    id: 9,
-    name: 'Pos Keamanan dan Informasi',
-    description: 'Tempat penjagaan dan pemberian informasi bagi warga.',
-    image: 'images/pos_keamanan_dan_informasi.png',
-  },
-  {
-    id: 10,
-    name: 'Penerangan Jalan Pondok',
-    description: 'Lampu jalan yang sebagian besar dipasang swadaya warga.',
-    image: 'images/penerangan_jalan_pondok.png',
-  },
-  {
-    id: 11,
-    name: 'Makam Padukuhan Pondok',
-    description: 'Terdapat dua makam, masing-masing di RT 03 dan RT 05.',
-    image: 'images/makam_padukuhan_pondok.png',
-  },
-  {
-    id: 12,
-    name: 'Posyandu Balita dan Lansia',
-    description: 'Tempat pelayanan kesehatan rutin untuk balita dan lansia guna mencegah stunting dan menurunkan angka kematian.',
-    image: 'images/posyandu_balita_dan_lansia.png',
-  },
-  {
-    id: 13,
-    name: 'Balai Pertemuan RT',
-    description: 'Fasilitas pertemuan warga di RT 05.',
-    image: 'images/balai_pertemuan_rt.png',
-  },
-])
+defineProps({
+  fasilitas: Object,
+});
+
+const formatDate = (date) => {
+  return new Date(date).toLocaleDateString('id-ID', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
 </script>
 
 <template>
-    <Head title="Beranda" />
+    <Head title="Fasilitas" />
 
     <MainLayout>
-        <div class="w-full flex flex-col">
-            <img class="w-full" src="/images/fasilitas_banner.png" alt="fasilitas banner"/>
-
-            <div class="w-full flex justify-center">
-                <div class="max-w-[1134px] flex flex-col items-center gap-12">
-                    <div class="flex flex-col gap-9">
-                        <div class="w-fit px-11 py-1.5 bg-primary-2 rounded-full -mt-9">
-                            <h1 class="title-2 text-white">
-                                Fasilitas Pedukuhan Pondok
-                            </h1>
-                        </div>
-                        <p class="medium-5 text-justify">
-                            Padukuhan Pondok memiliki beragam fasilitas seperti SPAH, IPAL komunal, irigasi, TPS3R, masjid, titik kumpul evakuasi, GOR, jembatan, pos keamanan dan penerangan jalan, makam, posyandu balita dan lansia, serta balai pertemuan RT yang mendukung kebutuhan warga sehari-hari.
-                        </p>
-                    </div>
-                    
-                    <div class="w-full grid grid-cols-4 gap-9">
-                        <Card
-                            v-for="product in products"
-                            :key="product.id"
-                            :title="product.name"
-                            :description="product.description"
-                            :image-url="product.image"
-                        />
-                    </div>
+        <div class="w-full flex flex-col justify-center items-center gap-14">
+            <div class="w-full flex flex-col justify-center items-center">
+                <img src="/images/fasilitas_banner.png" alt="Logo" class="w-full">
+                <div class="justify-center gap-5">
+                    <h1 class="w-fit -translate-y-1/2 title-2 text-white bg-primary-2 py-2 px-10 rounded-full">
+                        Fasilitas Padukuhan Pondok
+                    </h1>
+                    <p class="max-w-6xl regular-5 text-justify text-primary-6">
+                        Padukuhan Pondok memiliki beragam fasilitas seperti SPAH, IPAL komunal, irigasi, TPS3R, masjid, titik kumpul evakuasi, GOR, jembatan, pos keamanan dan penerangan jalan, makam, posyandu balita dan lansia, serta balai pertemuan RT yang mendukung kebutuhan warga sehari-hari.
+                    </p>
                 </div>
             </div>
+
+            <div class="max-w-7xl grid grid-cols-3 gap-9 mb-32">
+                <FasilitasCard
+                    v-for="fasilitas in fasilitas.data"
+                    :key="fasilitas.id"
+                    :id="fasilitas.id"
+                    :title="fasilitas.nama"
+                    :description="fasilitas.deskripsi"
+                    :imageUrl="fasilitas.gambar ? `/storage/${fasilitas.gambar}` : '/images/home_title_clip_image.png'"
+                />
+            </div>
+
+            <!-- Pagination -->
+            <!-- <div v-if="fasilitas.links" class="mt-8">
+                <nav class="flex items-center justify-between">
+                    <div class="flex-1 flex justify-between sm:hidden">
+                        <Link
+                            v-if="fasilitas.links.prev"
+                            :href="fasilitas.links.prev"
+                            class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                        >
+                            Previous
+                        </Link>
+                        <Link
+                            v-if="fasilitas.links.next"
+                            :href="fasilitas.links.next"
+                            class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+                        >
+                            Next
+                        </Link>
+                    </div>
+                    <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+                        <div>
+                            <p class="text-sm text-gray-700">
+                                Showing {{ fasilitas.from }} to {{ fasilitas.to }} of {{ fasilitas.total }} results
+                            </p>
+                        </div>
+                        <div>
+                            <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px">
+                                <template v-for="(link, index) in fasilitas.links" :key="index">
+                                    <Link
+                                        v-if="link.url"
+                                        :href="link.url"
+                                        v-html="link.label"
+                                        class="relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                                        :class="link.active ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600' : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50'"
+                                    />
+                                    <span
+                                        v-else
+                                        v-html="link.label"
+                                        class="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700"
+                                    />
+                                </template>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+            </div> -->
         </div>
     </MainLayout>
 </template>
