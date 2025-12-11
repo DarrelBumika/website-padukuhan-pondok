@@ -89,6 +89,160 @@
     --color-gray-11: #E6E6E6;
 }
 
+@utility text-caption {
+    @apply text-xs leading-3;
+}
+@utility text-caption-1 {
+    @apply text-caption font-extrabold;
+}
+@utility text-caption-2 {
+    @apply text-caption font-bold;
+}
+@utility text-caption-3 {
+    @apply text-caption font-semibold;
+}
+@utility text-caption-4 {
+    @apply text-caption font-medium;
+}
+@utility text-caption-5 {
+    @apply text-caption font-normal;
+}
+@utility text-caption-6 {
+    @apply text-caption font-light;
+}
+
+@utility text-regular {
+    @apply text-base leading-4;
+}
+@utility text-regular-1 {
+    @apply text-regular font-extrabold;
+}
+@utility text-regular-2 {
+    @apply text-regular font-bold;
+}
+@utility text-regular-3 {
+    @apply text-regular font-semibold;
+}
+@utility text-regular-4 {
+    @apply text-regular font-medium;
+}
+@utility text-regular-5 {
+    @apply text-regular font-normal;
+}
+@utility text-regular-6 {
+    @apply text-regular font-light;
+}
+
+@utility text-medium {
+    @apply text-xl leading-5;
+}
+@utility text-medium-1 {
+    @apply text-medium font-extrabold;
+}
+@utility text-medium-2 {
+    @apply text-medium font-bold;
+}
+@utility text-medium-3 {
+    @apply text-medium font-semibold;
+}
+@utility text-medium-4 {
+    @apply text-medium font-medium;
+}
+@utility text-medium-5 {
+    @apply text-medium font-normal;
+}
+@utility text-medium-6 {
+    @apply text-medium font-light;
+}
+
+@utility text-large {
+    @apply text-2xl leading-6;
+}
+@utility text-large-1 {
+    @apply text-large font-extrabold;
+}
+@utility text-large-2 {
+    @apply text-large font-bold;
+}
+@utility text-large-3 {
+    @apply text-large font-semibold;
+}
+@utility text-large-4 {
+    @apply text-large font-medium;
+}
+@utility text-large-5 {
+    @apply text-large font-normal;
+}
+@utility text-large-6 {
+    @apply text-large font-light;
+}
+
+@utility text-extralarge {
+    @apply text-[28px] leading-7;
+}
+@utility text-extralarge-1 {
+    @apply text-extralarge font-extrabold;
+}
+@utility text-extralarge-2 {
+    @apply text-extralarge font-bold;
+}
+@utility text-extralarge-3 {
+    @apply text-extralarge font-semibold;
+}
+@utility text-extralarge-4 {
+    @apply text-extralarge font-medium;
+}
+@utility text-extralarge-5 {
+    @apply text-extralarge font-normal;
+}
+@utility text-extralarge-6 {
+    @apply text-extralarge font-light;
+}
+
+@utility text-heading {
+    @apply text-4xl leading-9;
+}
+@utility text-heading-1 {
+    @apply text-heading font-extrabold;
+}
+@utility text-heading-2 {
+    @apply text-heading font-bold;
+}
+@utility text-heading-3 {
+    @apply text-heading font-semibold;
+}
+@utility text-heading-4 {
+    @apply text-heading font-medium;
+}
+@utility text-heading-5 {
+    @apply text-heading font-normal;
+}
+@utility text-heading-6 {
+    @apply text-heading font-light;
+}
+
+@utility text-title {
+    @apply text-[40px] leading-10;
+}
+@utility text-title-1 {
+    @apply text-[64px] text-title font-extrabold;
+}
+@utility text-title-2 {
+    @apply text-title font-bold;
+}
+@utility text-title-3 {
+    @apply text-title font-semibold;
+}
+@utility text-title-4 {
+    @apply text-title font-medium;
+}
+@utility text-title-5 {
+    @apply text-title font-normal;
+}
+@utility text-title-6 {
+    @apply text-title font-light;
+}
+
 body {
   @apply bg-white text-gray-900;
   font-family: 'Plus Jakarta Sans', sans-serif;
