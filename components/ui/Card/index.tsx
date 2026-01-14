@@ -40,11 +40,21 @@ const Card = (
             alt={title || "Card image"}
             fill
             objectFit="cover"
+            className={classNames(
+              {
+                "rounded-lg": variant === "ghost"
+              }
+            )}
           />
         </div>
       )}
       {title || description || date ? (
-        <div className="py-4 flex flex-col gap-1 p-4">
+        <div className={classNames(
+          "py-4 flex flex-col gap-1",
+          {
+            "p-4": variant !== "ghost"
+          }
+        )}>
           {date && <span className="text-xs text-gray-500">{date}</span>}
           {title && <h3 className="text-large-2 text-black-1 mb-2">{title}</h3>}
           {description && <p className="text-sm text-gray-600 mb-2">{description}</p>}
