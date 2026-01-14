@@ -15,6 +15,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: "Padukuhan Pondok",
   description: "Website Resmi Padukuhan Pondok",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
