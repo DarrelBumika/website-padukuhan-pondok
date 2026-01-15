@@ -24,7 +24,7 @@ const Card = (
   return (
     <div
       className={classNames(
-        "w-64 flex flex-col rounded-lg overflow-hidden",
+        "w-64 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden",
         variantClass,
         {
           "border border-white-2": !(variant === "ghost"),

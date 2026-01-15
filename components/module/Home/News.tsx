@@ -16,42 +16,42 @@ const News = () => {
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
         <Card
           variant="elevated"
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
         <Card
           variant="elevated"
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
         <Card
           variant="elevated"
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
         <Card
           variant="elevated"
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
         <Card
           variant="elevated"
           imageUrl={ImagePlaceholder}
           title="Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan"
           description="Pada hari Jum'at, 21 Januari 2021 Tim PSN Kapanewon Piyungan kembali melaksanakan giat Pemantauan Sarang Nyamuk... "
-          date="2 Agustus 2025"
+          date={new Date("2025-08-02")}
         />
       </div>
       <Button>
