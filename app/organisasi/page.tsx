@@ -111,16 +111,11 @@ const OrganisasiPage = () => {
       <div className="w-full max-w-6xl mx-auto px-4 pb-16 relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {filteredOrganizations.map((org) => (
-            <div
-              key={org.id}
-              className="group flex flex-col cursor-pointer transition-all duration-300 hover:-translate-y-1"
-            >
-              <Card
-                variant="ghost"
-                imageUrl={org.image}
-                title={org.name}
-              />
-            </div>
+            <Card
+              variant="ghost"
+              imageUrl={org.image}
+              title={org.name}
+            />
           ))}
         </div>
 
