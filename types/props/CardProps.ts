@@ -3,7 +3,7 @@ export interface CardProps {
   imageUrl?: StaticImageData | string;
   title?: string;
   description?: string;
-  date?: string;
+  date?: Date;
   variant?: "elevated" | "outlined" | "ghost";
   fullWidth?: boolean;
   noBorder?: boolean;
