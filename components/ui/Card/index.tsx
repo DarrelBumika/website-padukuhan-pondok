@@ -12,7 +12,8 @@ const Card = (
     description,
     date,
     variant = "elevated",
-    fullWidth = false
+    fullWidth = false,
+    onClick
   }: CardProps
 ) => {
   const variantStyles = {
@@ -21,18 +22,19 @@ const Card = (
     ghost: "bg-transparent"
   };
   const variantClass = variantStyles[variant];
+
+  const cardClassName = classNames(
+    "w-64 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden",
+    variantClass,
+    {
+      "border border-white-2": !(variant === "ghost"),
+      "w-full": fullWidth,
+      "max-w-3xl mx-auto": !fullWidth,
+    }
+  );
+
   return (
-    <div
-      className={classNames(
-        "w-64 flex flex-col group cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-lg overflow-hidden",
-        variantClass,
-        {
-          "border border-white-2": !(variant === "ghost"),
-          "w-full": fullWidth,
-          "max-w-3xl mx-auto": !fullWidth,
-        }
-      )}
-    >
+    <div className={cardClassName} onClick={onClick}>
       {imageUrl && (
         <div className="relative h-64">
           <Image
