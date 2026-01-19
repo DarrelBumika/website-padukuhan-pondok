@@ -2,36 +2,16 @@
 
 import { useState, useMemo } from "react";
 import Card from "@/components/ui/Card";
-
-import OrgPKKimage from "@/src/images/org-pkk.png"
-import OrgPosyanduBalita from "@/src/images/org-posyandu-balita.png"
-import OrgPosyanduLansia from "@/src/images/org-posyandu-lansia.png"
-import OrgKelompokJumantik from "@/src/images/org-kelompok-jumantik.png"
-import OrgTakmirMasjidAlHaq from "@/src/images/org-takmir-masjid-alhaq.png"
-import OrgTakmirMasjidNurulIlmi from "@/src/images/org-takmir-masjid-nurul-ilmi.png"
-import OrgFordak from "@/src/images/org-fordak.png"
-import OrgIkatanRemajaMasjid from "@/src/images/org-ikatan-remaja-masjid.png"
-
-// Organization data
-const news = [
-  { id: 1, name: "Warga Padukuhan Pondok Gelar Kerja Bakti Bersihkan Lingkungan", image: OrgPKKimage, date: new Date() },
-  { id: 2, name: "Warga Pondok Gelar Jalan Sehat, Senam & Cek Kesehatan", image: OrgPosyanduBalita, date: new Date() },
-  { id: 3, name: "PKK Padukuhan Pondok Selenggarakan Pelatihan Olahan Pangan Sehat", image: OrgPosyanduLansia, date: new Date() },
-  { id: 4, name: "Pentas Seni Budaya Meriahkan Malam Mingguan Warga", image: OrgKelompokJumantik, date: new Date() },
-  { id: 5, name: "Posyandu Balita Rutin Digelar, Antusias Ibu-Ibu Tinggi", image: OrgTakmirMasjidAlHaq, date: new Date() },
-  { id: 6, name: "Pengajian Akbar Pererat Ukhuwah Warga Padukuhan Pondok", image: OrgTakmirMasjidNurulIlmi, date: new Date() },
-  { id: 7, name: "Kelompok Tani Panen Raya Padi dengan Hasil Melimpah", image: OrgFordak, date: new Date() },
-  { id: 8, name: "Gotong Royong Pembangunan Pos Kamling Baru", image: OrgIkatanRemajaMasjid, date: new Date() }
-];
+import { newsData } from "@/constants/dummy";
 
 const BeritaPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   // Filter news based on search query
   const filteredNews = useMemo(() => {
-    if (!searchQuery.trim()) return news;
-    return news.filter((news) =>
-      news.name.toLowerCase().includes(searchQuery.toLowerCase())
+    if (!searchQuery.trim()) return newsData;
+    return newsData.filter((news) =>
+      news.title.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery]);
 
@@ -84,7 +64,7 @@ const BeritaPage = () => {
               key={news.id}
               variant="ghost"
               imageUrl={news.image}
-              title={news.name}
+              title={news.title}
               date={news.date}
             />
           ))}
