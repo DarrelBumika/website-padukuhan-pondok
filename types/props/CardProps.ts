@@ -7,4 +7,5 @@ export interface CardProps {
   variant?: "elevated" | "outlined" | "ghost";
   fullWidth?: boolean;
   noBorder?: boolean;
+  onClick?: () => void;
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+import { useRouter } from "next/navigation";
 import Card from "@/components/ui/Card";
 
 import OrgPKKimage from "@/src/images/org-pkk.png"
@@ -53,6 +54,7 @@ const organizations = [
 ];
 
 const OrganisasiPage = () => {
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 
   // Filter organizations based on search query
@@ -62,6 +64,7 @@ const OrganisasiPage = () => {
       org.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
   }, [searchQuery]);
+
 
   return (
     <div className="w-full flex flex-col min-h-screen bg-white relative overflow-hidden py-16">
@@ -112,9 +115,11 @@ const OrganisasiPage = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {filteredOrganizations.map((org) => (
             <Card
+              key={org.id}
               variant="ghost"
               imageUrl={org.image}
               title={org.name}
+              onClick={() => router.push(`/organisasi/${org.id}`)}
             />
           ))}
         </div>

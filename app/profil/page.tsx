@@ -19,6 +19,7 @@ import ProfileKampungBudayaJathilan1Image from "@/src/images/profile-kampung-bud
 import ProfileKampungBudayaJathilan2Image from "@/src/images/profile-kampung-budaya-jathilan-2.png";
 import ProfileKampungBudayaJathilan3Image from "@/src/images/profile-kampung-budaya-jathilan-3.png";
 import ProfileKampungBudayaJathilan4Image from "@/src/images/profile-kampung-budaya-jathilan-4.png";
+import SideNavigation from "@/components/shared/SideNavigation";
 
 // Navigation items for the sidebar
 const navItems = [
@@ -86,29 +87,13 @@ const ProfilPage = () => {
       </div>
 
       {/* Content Section with Sticky Sidebar */}
-      <div className="w-full max-w-7xl mx-auto flex items-start px-6 py-16 gap-8">
+      <div className="w-full max-w-7xl mx-auto flex items-start relative px-6 py-16 gap-8">
         {/* Sticky Sidebar Navigation */}
-        <aside className="w-64 shrink-0 sticky top-24 self-start">
-          <nav className="bg-primary-2 rounded-xl shadow-lg border border-gray-11 overflow-hidden">
-            <ul className="px-2 py-8">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <button
-                    onClick={() => scrollToSection(item.id)}
-                    className={`w-full text-left px-5 py-3 text-regular-4 transition-all duration-300 cursor-pointer text-primary-11 rounded-lg
-                      ${activeSection === item.id
-                        ? "bg-darker-5 text-primary-1 font-semibold"
-                        : "hover:bg-gray-11 hover:text-primary-2"
-                      }
-                    `}
-                  >
-                    {item.label}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
+        <SideNavigation
+          navItems={navItems}
+          activeSection={activeSection}
+          scrollToSection={scrollToSection}
+        />
 
         {/* Main Content */}
         <main className="flex-1 space-y-16">
