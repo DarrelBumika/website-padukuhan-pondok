@@ -1,8 +1,11 @@
-import Chip from "@/components/ui/Chip";
-import Card from "@/components/ui/Card";
+"use client";
 
-import ImagePlaceholder from "@/src/images/placeholder.png";
+import Chip from "@/components/ui/Chip";
+
 import Button from "@/components/ui/Button";
+import OrganizationCard from "@/components/shared/OrganizationCard";
+
+import { organizations } from "@/constants/organizations";
 
 const Organization = () => {
   return (
@@ -15,26 +18,14 @@ const Organization = () => {
         </p>
       </div>
       <div className="flex gap-9">
-        <Card
-          variant="ghost"
-          imageUrl={ImagePlaceholder}
-          title="Organisasi"
-        />
-        <Card
-          variant="ghost"
-          imageUrl={ImagePlaceholder}
-          title="Organisasi"
-        />
-        <Card
-          variant="ghost"
-          imageUrl={ImagePlaceholder}
-          title="Organisasi"
-        />
-        <Card
-          variant="ghost"
-          imageUrl={ImagePlaceholder}
-          title="Organisasi"
-        />
+        {organizations.slice(0, 4).map((organization) => (
+          <OrganizationCard
+            key={organization.id}
+            imageUrl={organization.image}
+            title={organization.name}
+            onClick={() => { }}
+          />
+        ))}
       </div>
       <Button variant="filled">Selengkapnya</Button>
     </div>

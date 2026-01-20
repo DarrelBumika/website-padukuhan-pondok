@@ -9,6 +9,8 @@ import SideNavigation from "@/components/shared/SideNavigation";
 import { organizations } from "@/constants/organizations";
 import { relatedNews } from "@/constants/dummy";
 import PlaceholderImage from "@/src/images/placeholder.png";
+import NewsCard from "@/components/shared/NewsCard";
+import router from "next/router";
 
 const navItems = [
   { id: "deskripsi", label: "Deskripsi" },
@@ -191,11 +193,12 @@ const OrganisasiDetailPage = ({ params }: OrganisasiDetailPageProps) => {
               <div className="flex gap-4 overflow-x-auto pb-4">
                 {(showAllNews ? relatedNews : relatedNews.slice(0, 4)).map((news) => (
                   <div key={news.id} className="shrink-0">
-                    <Card
-                      variant="ghost"
-                      imageUrl={news.image}
+                    <NewsCard
+                      imageUrl={news.thumbnail}
                       title={news.title}
+                      preview={news.preview}
                       date={news.date}
+                      onClick={() => router.push(`/berita/${news.id}`)}
                     />
                   </div>
                 ))}
