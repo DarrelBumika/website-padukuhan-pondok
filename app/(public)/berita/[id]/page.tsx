@@ -28,7 +28,7 @@ const NewsDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
   // Use gallery from data or fallback to main image if gallery is empty
   const galleryImages = newsItem.gallery && newsItem.gallery.length > 0
     ? newsItem.gallery
-    : [newsItem.image];
+    : [newsItem.thumbnail];
 
   return (
     <div className="w-full min-h-screen bg-white relative pb-20">
@@ -115,7 +115,7 @@ const NewsDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
             <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
               {newsItem.content.map((section, idx) => (
                 <div key={idx} className="md:col-span-12">
-                  {section.title && <h3 className="text-xl font-bold text-gray-900 mb-2">{section.title}</h3>}
+                  {section.subtitle && <h3 className="text-xl font-bold text-gray-900 mb-2">{section.subtitle}</h3>}
                   <p>{section.body}</p>
                 </div>
               ))}

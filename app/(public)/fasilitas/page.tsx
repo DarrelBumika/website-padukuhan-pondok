@@ -54,6 +54,7 @@ const FasilitasPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
             {facilities.map((facility) => (
               <FacilityCard
+                key={facility.id}
                 imageUrl={facility.image}
                 title={facility.name}
               />
