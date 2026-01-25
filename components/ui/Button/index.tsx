@@ -5,7 +5,7 @@ import { ButtonProps } from "@/types/props/ButtonProps";
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   color = "primary",
   variant = "filled",
-  children = "Button",
+  text = "Button",
   className,
   isIconButton = false,
   ...props
@@ -13,7 +13,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   const getVariantStyles = () => {
     const baseStyles = classNames(
       className,
-      "w-fit flex text-regular-1 rounded-full transition-colors focus:outline-none hover:cursor-pointer",
+      "w-fit flex items-center justify-center text-regular-1 rounded-full transition-colors focus:outline-none hover:cursor-pointer",
       {
         "px-6 py-4": !isIconButton,
         "p-2": isIconButton,
@@ -41,7 +41,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
       className={classNames(getVariantStyles(), className)}
       {...props}
     >
-      {children}
+      {text}
     </button>
   );
 });
