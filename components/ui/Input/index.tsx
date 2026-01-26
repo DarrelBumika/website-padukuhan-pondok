@@ -1,11 +1,11 @@
 import classNames from "classnames"
-import { InputHTMLAttributes } from "react"
+import { forwardRef, InputHTMLAttributes } from "react"
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
 }
 
-const Input: React.FC<InputProps> = ({
+const Input = forwardRef<HTMLInputElement, InputProps>(({
   label,
   type,
   placeholder,
@@ -17,7 +17,7 @@ const Input: React.FC<InputProps> = ({
   readOnly,
   className,
   ...props
-}) => {
+}, ref) => {
   const classes = classNames(
     "w-lg px-5 py-3 border border-black-5 rounded-lg focus:outline-none focus:ring-2 focus:ring-darker-10 ",
     className
@@ -27,6 +27,7 @@ const Input: React.FC<InputProps> = ({
     <label className="flex flex-col gap-4">
       {label && <span className="text-medium-3 font-black">{label}</span>}
       <input
+        ref={ref}
         type={type}
         placeholder={placeholder}
         value={value}
@@ -40,6 +41,8 @@ const Input: React.FC<InputProps> = ({
       />
     </label>
   )
-}
+})
+
+Input.displayName = "Input"
 
 export default Input

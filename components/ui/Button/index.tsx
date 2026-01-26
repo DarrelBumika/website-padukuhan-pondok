@@ -13,7 +13,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
   const getVariantStyles = () => {
     const baseStyles = classNames(
       className,
-      "w-fit flex items-center justify-center text-regular-1 rounded-full transition-colors focus:outline-none hover:cursor-pointer",
+      "w-fit flex items-center justify-center text-regular-1 rounded-full transition-colors focus:outline-none hover:cursor-pointer cursor-pointer",
       {
         "px-6 py-4": !isIconButton,
         "p-2": isIconButton,
