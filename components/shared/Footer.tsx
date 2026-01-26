@@ -7,7 +7,8 @@ import {
   TbBrandTiktokFilled,
   TbBrandYoutubeFilled
 } from "react-icons/tb";
-import Button from "../ui/Button";
+import Button from "@/components/ui/Button";
+import Divider from "@/components/ui/Divider";
 
 const Footer = () => {
   return (
@@ -31,7 +32,9 @@ const Footer = () => {
           <TbBrandTiktokFilled size={24} color="white" />
         </Button>
       </div>
-      <div className="w-full h-px bg-darker-10 opacity-10" />
+
+      <Divider className="opacity-10" />
+
       <p className="text-caption-5 text-white">© 2025 KKN UNY Pondok. All Rights Reserved. </p>
       <Image src={DecorationWaveImage} width={512} height={512} alt="Decoration Leaves" className="absolute bottom-0 left-0 translate-y-1/2" />
       <Image src={DecorationWaveImage} width={512} height={256} alt="Decoration Leaves" className="absolute top-0 right-0 -translate-y-1/2 rotate-180" />

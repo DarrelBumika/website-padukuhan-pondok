@@ -2,56 +2,10 @@
 
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
-import Card from "@/components/ui/Card";
-
-import OrgPKKimage from "@/src/images/org-pkk.png"
-import OrgPosyanduBalita from "@/src/images/org-posyandu-balita.png"
-import OrgPosyanduLansia from "@/src/images/org-posyandu-lansia.png"
-import OrgKelompokJumantik from "@/src/images/org-kelompok-jumantik.png"
-import OrgTakmirMasjidAlHaq from "@/src/images/org-takmir-masjid-alhaq.png"
-import OrgTakmirMasjidNurulIlmi from "@/src/images/org-takmir-masjid-nurul-ilmi.png"
-import OrgFordak from "@/src/images/org-fordak.png"
-import OrgIkatanRemajaMasjid from "@/src/images/org-ikatan-remaja-masjid.png"
-import OrgKppTps3R from "@/src/images/org-kpp-tps-3r.png"
-import OrgIpalKomunal from "@/src/images/org-ipal-komunal.png"
-import OrgKelompokTani from "@/src/images/org-kelompok-tani.png"
-import OrgKelompokWanitaTani from "@/src/images/org-kelompok-wanita-tani.png"
-import OrgHadrohAzZahra from "@/src/images/org-hadroh-azzahra.png"
-import OrgHadrohMiftahulJannah from "@/src/images/org-hadroh-miftahul-jannah.png"
-import OrgBankSampahKencanaKragilan from "@/src/images/org-bank-sampah-kencana-kragilan.png"
-import OrgBankSampahAssalamManggulan from "@/src/images/org-bank-sampah-assalam-manggulan.png"
-import OrgJathilanRosoTunggal from "@/src/images/org-jathilan-roso-tunggal.png"
-import OrgKarawitanSekarPutri from "@/src/images/org-karawitan-sekar-putri.png"
-import OrgTrafficking from "@/src/images/org-trafficking.png"
-import OrgPerkumpulanPetaniPemakaiAir from "@/src/images/org-perkumpulan-petani-pemakai-air.png"
-import OrgKelompokIkanMinoManunggal from "@/src/images/org-kelompok-ikan-mino-manunggal.png"
-import OrgPangruktiLoyo from "@/src/images/org-pangrukti-loyo.png"
+import OrganizationCard from "@/components/shared/OrganizationCard";
 
 // Organization data
-const organizations = [
-  { id: 1, name: "PKK Padukuhan Pondok", image: OrgPKKimage },
-  { id: 2, name: "Posyandu Balita", image: OrgPosyanduBalita },
-  { id: 3, name: "Posyandu Lansia", image: OrgPosyanduLansia },
-  { id: 4, name: "Kelompok Jumantik", image: OrgKelompokJumantik },
-  { id: 5, name: "Takmir Masjid Al Haq", image: OrgTakmirMasjidAlHaq },
-  { id: 6, name: "Takmir Masjid Nurul Ilmi", image: OrgTakmirMasjidNurulIlmi },
-  { id: 7, name: "FORDAK", image: OrgFordak },
-  { id: 8, name: "Ikatan Remaja Masjid", image: OrgIkatanRemajaMasjid },
-  { id: 9, name: "KPP TPS 3 R", image: OrgKppTps3R },
-  { id: 10, name: "IPAL Komunal", image: OrgIpalKomunal },
-  { id: 11, name: "Kelompok Tani", image: OrgKelompokTani },
-  { id: 12, name: "Kelompok Wanita Tani (KWT)", image: OrgKelompokWanitaTani },
-  { id: 13, name: "Hadroh Az-Zahra", image: OrgHadrohAzZahra },
-  { id: 14, name: "Hadroh Miftahul Jannah", image: OrgHadrohMiftahulJannah },
-  { id: 15, name: "Bank Sampah Kencana Kragilan", image: OrgBankSampahKencanaKragilan },
-  { id: 16, name: "Bank Sampah Assalam Manggulan", image: OrgBankSampahAssalamManggulan },
-  { id: 17, name: "Jathilan Roso Tunggal", image: OrgJathilanRosoTunggal },
-  { id: 18, name: "Karawitan Sekar Putri", image: OrgKarawitanSekarPutri },
-  { id: 19, name: "Trafficking", image: OrgTrafficking },
-  { id: 20, name: "Perkumpulan Petani Pemakai Air (P3A)", image: OrgPerkumpulanPetaniPemakaiAir },
-  { id: 21, name: "Kelompok Ikan Mino Manunggal", image: OrgKelompokIkanMinoManunggal },
-  { id: 22, name: "Pangrukti Loyo", image: OrgPangruktiLoyo },
-];
+import { organizations } from "@/constants/organizations";
 
 const OrganisasiPage = () => {
   const router = useRouter();
@@ -114,9 +68,8 @@ const OrganisasiPage = () => {
       <div className="w-full max-w-6xl mx-auto px-4 pb-16 relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {filteredOrganizations.map((org) => (
-            <Card
+            <OrganizationCard
               key={org.id}
-              variant="ghost"
               imageUrl={org.image}
               title={org.name}
               onClick={() => router.push(`/organisasi/${org.id}`)}

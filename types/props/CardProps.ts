@@ -1,11 +1,14 @@
-import { StaticImageData } from "next/image";
+type sizeType = "sm" | "md" | "lg" | "xl" | "2xl";
+
 export interface CardProps {
-  imageUrl?: StaticImageData | string;
-  title?: string;
-  description?: string;
-  date?: Date;
-  variant?: "elevated" | "outlined" | "ghost";
+  rounded?: sizeType;
   fullWidth?: boolean;
+  noPadding?: boolean;
+  noShadow?: boolean;
+  noBackground?: boolean;
   noBorder?: boolean;
+  hoverable?: boolean;
   onClick?: () => void;
+  className?: string;
+  children?: React.ReactNode;
 }

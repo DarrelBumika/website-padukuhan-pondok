@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Card from "@/components/ui/Card";
 import { newsData } from "@/constants/dummy";
+import NewsCard from "@/components/shared/NewsCard";
 
 const BeritaPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -60,11 +60,11 @@ const BeritaPage = () => {
       <div className="w-full max-w-6xl mx-auto px-4 pb-16 relative z-10">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
           {filteredNews.map((news) => (
-            <Card
+            <NewsCard
               key={news.id}
-              variant="ghost"
-              imageUrl={news.image}
+              imageUrl={news.thumbnail}
               title={news.title}
+              preview={news.preview}
               date={news.date}
             />
           ))}
