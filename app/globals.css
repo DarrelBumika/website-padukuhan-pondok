@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-darker-1: #0C1100;
+    --color-darker-2: #0C1100;
+    --color-darker-3: #1F2A00;
+    --color-darker-4: #293700;
+    --color-darker-5: #334500;
+    --color-darker-6: #3D5300;
+    --color-darker-7: #5D702B;
+    --color-darker-8: #7E8C55;
+    --color-darker-9: #9EA980;
+    --color-darker-10: #BEC6AA;
+    --color-darker-11: #D8DDCC;
+
+    --color-primary-1: #5D8736;
+    --color-primary-2: #4E712D;
+    --color-primary-3: #789B58;
+    --color-primary-4: #3E5A24;
+    --color-primary-5: #93AF79;
+    --color-primary-6: #2F441B;
+    --color-primary-7: #AEC39A;
+    --color-primary-8: #1F2D12;
+    --color-primary-9: #C9D7BC;
+    --color-primary-10: #131B0B;
+    --color-primary-11: #DFE7D7;
+
+    --color-secondary-1: #809D3C;
+    --color-secondary-2: #6B8332;
+    --color-secondary-3: #95AD5D;
+    --color-secondary-4: #556928;
+    --color-secondary-5: #AABE7D;
+    --color-secondary-6: #404F1E;
+    --color-secondary-7: #BFCE9D;
+    --color-secondary-8: #2B3414;
+    --color-secondary-9: #D5DEBE;
+    --color-secondary-10: #1A1F0C;
+    --color-secondary-11: #E6EBD8;
+
+    --color-accent-1: #A9C46C;
+    --color-accent-2: #8DA35A;
+    --color-accent-3: #B7CE84;
+    --color-accent-4: #718348;
+    --color-accent-5: #C6D89D;
+    --color-accent-6: #556236;
+    --color-accent-7: #D4E1B5;
+    --color-accent-8: #384124;
+    --color-accent-9: #E2EBCE;
+    --color-accent-10: #222716;
+    --color-accent-11: #EEF3E2;
+
+    --color-lighter-1: #F4FFC3;
+    --color-lighter-2: #CBD4A2;
+    --color-lighter-3: #F6FFCD;
+    --color-lighter-4: #A3AA82;
+    --color-lighter-5: #F8FFD7;
+    --color-lighter-6: #7A8062;
+    --color-lighter-7: #F9FFE1;
+    --color-lighter-8: #515541;
+    --color-lighter-9: #FBFFEB;
+    --color-lighter-10: #313327;
+    --color-lighter-11: #FDFFF3;
+
+    --color-black-1: #000000;
+    --color-black-2: #2B2B2B;
+    --color-black-3: #555555;
+    --color-black-4: #808080;
+    --color-black-5: #AAAAAA;
+    --color-black-6: #CCCCCC;
+
+    --color-white-1: #FFFFFF;
+    --color-white-2: #D4D4D4;
+    --color-white-3: #AAAAAA;
+    --color-white-4: #808080;
+    --color-white-5: #555555;
+    --color-white-6: #333333;
+
+    --color-gray-1: #808080;
+    --color-gray-2: #6B6B6B;
+    --color-gray-3: #959595;
+    --color-gray-4: #555555;
+    --color-gray-5: #AAAAAA;
+    --color-gray-6: #404040;
+    --color-gray-7: #BFBFBF;
+    --color-gray-8: #2B2B2B;
+    --color-gray-9: #D4D4D4;
+    --color-gray-10: #1A1A1A;
+    --color-gray-11: #E6E6E6;
+}
+
+@utility text-caption {
+    @apply text-xs leading-3;
+}
+@utility text-caption-1 {
+    @apply text-caption font-extrabold;
+}
+@utility text-caption-2 {
+    @apply text-caption font-bold;
+}
+@utility text-caption-3 {
+    @apply text-caption font-semibold;
+}
+@utility text-caption-4 {
+    @apply text-caption font-medium;
+}
+@utility text-caption-5 {
+    @apply text-caption font-normal;
+}
+@utility text-caption-6 {
+    @apply text-caption font-light;
+}
+
+@utility text-regular {
+    @apply text-base leading-4;
+}
+@utility text-regular-1 {
+    @apply text-regular font-extrabold;
+}
+@utility text-regular-2 {
+    @apply text-regular font-bold;
+}
+@utility text-regular-3 {
+    @apply text-regular font-semibold;
+}
+@utility text-regular-4 {
+    @apply text-regular font-medium;
+}
+@utility text-regular-5 {
+    @apply text-regular font-normal;
+}
+@utility text-regular-6 {
+    @apply text-regular font-light;
+}
+
+@utility text-medium {
+    @apply text-xl leading-5;
+}
+@utility text-medium-1 {
+    @apply text-medium font-extrabold;
+}
+@utility text-medium-2 {
+    @apply text-medium font-bold;
+}
+@utility text-medium-3 {
+    @apply text-medium font-semibold;
+}
+@utility text-medium-4 {
+    @apply text-medium font-medium;
+}
+@utility text-medium-5 {
+    @apply text-medium font-normal;
+}
+@utility text-medium-6 {
+    @apply text-medium font-light;
+}
+
+@utility text-large {
+    @apply text-2xl leading-6;
+}
+@utility text-large-1 {
+    @apply text-large font-extrabold;
+}
+@utility text-large-2 {
+    @apply text-large font-bold;
+}
+@utility text-large-3 {
+    @apply text-large font-semibold;
+}
+@utility text-large-4 {
+    @apply text-large font-medium;
+}
+@utility text-large-5 {
+    @apply text-large font-normal;
+}
+@utility text-large-6 {
+    @apply text-large font-light;
+}
+
+@utility text-extralarge {
+    @apply text-[28px] leading-7;
+}
+@utility text-extralarge-1 {
+    @apply text-extralarge font-extrabold;
+}
+@utility text-extralarge-2 {
+    @apply text-extralarge font-bold;
+}
+@utility text-extralarge-3 {
+    @apply text-extralarge font-semibold;
+}
+@utility text-extralarge-4 {
+    @apply text-extralarge font-medium;
+}
+@utility text-extralarge-5 {
+    @apply text-extralarge font-normal;
+}
+@utility text-extralarge-6 {
+    @apply text-extralarge font-light;
+}
+
+@utility text-heading {
+    @apply text-4xl leading-9;
+}
+@utility text-heading-1 {
+    @apply text-heading font-extrabold;
+}
+@utility text-heading-2 {
+    @apply text-heading font-bold;
+}
+@utility text-heading-3 {
+    @apply text-heading font-semibold;
+}
+@utility text-heading-4 {
+    @apply text-heading font-medium;
+}
+@utility text-heading-5 {
+    @apply text-heading font-normal;
+}
+@utility text-heading-6 {
+    @apply text-heading font-light;
+}
+
+@utility text-title {
+    @apply text-[40px] leading-10;
+}
+@utility text-title-1 {
+    @apply text-[64px] text-title font-extrabold;
+}
+@utility text-title-2 {
+    @apply text-title font-bold;
+}
+@utility text-title-3 {
+    @apply text-title font-semibold;
+}
+@utility text-title-4 {
+    @apply text-title font-medium;
+}
+@utility text-title-5 {
+    @apply text-title font-normal;
+}
+@utility text-title-6 {
+    @apply text-title font-light;
+}
+
+body {
+  @apply bg-white text-gray-900;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
